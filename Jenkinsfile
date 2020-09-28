@@ -1,9 +1,14 @@
 pipeline {
-  agent {
-    node {
-      label 'maven'
+  agent none
+}
+
+
+    stages{
+        stage ('checkout scm') {
+            checkout(scm)
+        }
     }
-  }
+
 
 //     parameters {
 //         string(name:'TAG_NAME',defaultValue: '',description:'')
