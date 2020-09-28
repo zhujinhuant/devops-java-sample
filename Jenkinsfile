@@ -6,10 +6,10 @@ pipeline {
     }
 
     stages{
-        stage("run test case"){
+        stage("maven"){
             steps {
                 script{
-                    echo "${params.TAG_NAME}"
+                   sh 'mvn clean install'
                 }
             }
         }
