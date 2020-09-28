@@ -1,6 +1,6 @@
 pipeline {
   agent none
-}
+
 
 
     stages{
@@ -8,10 +8,11 @@ pipeline {
         			steps {
         			    script{
         			        echo "hello"
-        			}}
+        			    }
+        			}
         		}
     }
-
+}
 
 //     parameters {
 //         string(name:'TAG_NAME',defaultValue: '',description:'')
@@ -110,4 +111,3 @@ pipeline {
 //         }
 //     }
 
-}
