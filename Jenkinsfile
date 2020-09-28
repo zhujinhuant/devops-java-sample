@@ -7,9 +7,9 @@ pipeline {
 
     triggers {
         gitlab (
-            triggerOnPush: true,          # 当 GitLab 触发 push 事件时，是否执行构建
-            triggerOnMergeRequest: true,  # 当 GitLab 触发 mergeRequest 事件时，是否执行构建
-            branchFilterType: 'All',      # 只有符合条件的分支才会触发构建
+            triggerOnPush: true,          // 当 GitLab 触发 push 事件时，是否执行构建
+            triggerOnMergeRequest: true,  // 当 GitLab 触发 mergeRequest 事件时，是否执行构建
+            branchFilterType: 'All',      // 只有符合条件的分支才会触发构建
             secretToken: "abc"
             )
     }
