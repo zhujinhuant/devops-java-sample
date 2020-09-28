@@ -4,9 +4,12 @@ pipeline {
 
 
     stages{
-        stage ('checkout scm') {
-            checkout(scm)
-        }
+        stage("run test case"){
+        			steps {
+        			    script{
+        			        echo "hello"
+        			}}
+        		}
     }
 
 
