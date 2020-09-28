@@ -1,22 +1,22 @@
 pipeline {
-  agent none
+    agent none
 
-
+    parameters {
+        string(name:'TAG_NAME',defaultValue: 'v1.0.0',description:'www')
+    }
 
     stages{
         stage("run test case"){
-        			steps {
-        			    script{
-        			        echo "hello"
-        			    }
-        			}
-        		}
+            steps {
+                script{
+                    echo "${params.TAG_NAME}"
+                }
+            }
+        }
     }
 }
 
-//     parameters {
-//         string(name:'TAG_NAME',defaultValue: '',description:'')
-//     }
+
 //
 //     environment {
 //         DOCKER_CREDENTIAL_ID = 'dockerhub-id'
