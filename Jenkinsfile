@@ -10,10 +10,15 @@ pipeline {
     stages{
         stage("maven"){
             steps {
-                sh 'mvn clean install'
+                echo 'Hello World'
+                script{
+                    mvn clean install
+                }
             }
         }
     }
+
+
 }
 
 
